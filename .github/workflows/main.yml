@@ -1,11 +1,12 @@
-name: say_hello
-on:
-  push
+name: Say Hello Workflow
+
+on: [push]
+
 jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Greeting Message
+      - name: Say hello
         run: echo "Hello, world"
